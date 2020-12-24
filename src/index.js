@@ -8,6 +8,7 @@ function component() {
   element.innerHTML = "Button HTML"
 
   btn.innerHTML = 'Click me and check the console!';
+  // 点击时动态加载bundle
   btn.onclick = e => import(/* webpackChunkName: "print" */ './print').then(module => {
     var print = module.default
     print()
