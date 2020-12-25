@@ -7,12 +7,7 @@ function component() {
   // Lodash（目前通过一个 script 脚本引入）对于执行这一行是必需的
   element.innerHTML = "Button HTML"
 
-  btn.innerHTML = 'Click me and check the console!';
-  // 点击时动态加载bundle
-  btn.onclick = e => import(/* webpackChunkName: "print" */ './print').then(module => {
-    var print = module.default
-    print()
-  });
+  btn.innerHTML = join(['hello', 'world'],' ')
 
   element.appendChild(btn);
 

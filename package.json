@@ -8,6 +8,7 @@
     "build": "webpack --config webpack.prod.js",
     "start": "webpack-dev-server --open --config webpack.dev.js"
   },
+  "sideEffects": false,
   "keywords": [],
   "author": "",
   "license": "ISC",
